@@ -1,1 +1,1 @@
-# DSA-Practice
+# Data Structures & Algorithms Practice
