@@ -1,7 +1,7 @@
 import 'core-js/stable';
 
 /**
- * Problem 1480. Running Sum of 1d Array
+ * 1480. Running Sum of 1d Array
  * @link https://leetcode.com/problems/running-sum-of-1d-array/
  * @param {number[]} nums
  * @return {number[]}
@@ -9,12 +9,11 @@ import 'core-js/stable';
  */
 const runningSum = function (nums) {
   let count = 0;
-  const runningSum = nums.map(el => (count += el));
-  return runningSum;
+  return nums.map(num => (count += num));
 };
 
 /**
- * Problem 1108. Defanging an IP Address
+ * 1108. Defanging an IP Address
  * @link https://leetcode.com/problems/defanging-an-ip-address/
  * @param {string} address
  * @return {string}
