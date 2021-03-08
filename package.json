@@ -16,7 +16,10 @@
     "regenerator-runtime": "^0.13.7"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.3.4",
+    "babel-jest": "^26.6.3",
     "jest": "^26.6.3",
-    "parcel": "^2.0.0-beta.1"
+    "parcel-bundler": "^1.12.3"
   }
 }
