@@ -5,6 +5,11 @@ export class DynamicArray {
     this.endIndex = 0;
   }
 
+  /**
+   * Halves the size of the array once endIndex is less than half
+   * of the capacity and copies over the elements from the old array
+   * to the new array
+   */
   halfArrayCapacity() {
     const temp = new Array(this.capacity / 2);
     for (let i = 0; i < this.capacity; i++) {
@@ -15,8 +20,8 @@ export class DynamicArray {
   }
 
   /**
-   * Doubles the size of the array once it reaches the current capacity
-   * and copy over the elements from the old array to the new array
+   * Doubles the capactiy of the array once it reaches the current capacity
+   * and copies over the elements from the old array to the new array
    */
   doubleArrayCapacity() {
     const temp = new Array(this.capacity * 2);
@@ -29,7 +34,7 @@ export class DynamicArray {
 
   /**
    *
-   * @param element - element to insert
+   * @param element - to add
    * @param {number} index - Specific index to add element
    */
   add(element, index = this.endIndex) {
@@ -42,12 +47,12 @@ export class DynamicArray {
       this.doubleArrayCapacity();
     }
 
-    // If index not supplied, add at last index
+    // if index not supplied, add at last index
     if (arguments.length == 1) {
       this.dynamicArray[this.endIndex++] = element;
     }
 
-    // If index supplied, insert at specific index and shift elements to the right
+    // if index supplied, add at the specified index and shift elements to the right
     if (arguments.length == 2) {
       if (index < this.endIndex) {
         const temp = new Array(this.capacity);
@@ -114,6 +119,8 @@ export class DynamicArray {
       return;
     }
 
+    // remove element at the specified index and shift elements
+    // to the left
     const temp = [];
     let pointer = 0;
     for (let i = 0; i < this.endIndex; i++) {
