@@ -110,3 +110,20 @@ describe('Test halving the array', () => {
     expect(arr.getCapacity()).toEqual(4);
   });
 });
+
+describe('Test getting elements', () => {
+  const arr = new DynamicArray();
+  arr.add(1);
+  arr.add('2');
+  arr.add(3);
+
+  test('Element 0', () => {
+    expect(arr.get(0)).toEqual(1);
+  });
+  test('Element 1', () => {
+    expect(arr.get(1)).toEqual('2');
+  });
+  test('Element 2', () => {
+    expect(arr.get(2)).toEqual(3);
+  });
+});

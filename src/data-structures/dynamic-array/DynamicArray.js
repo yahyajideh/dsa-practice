@@ -141,7 +141,7 @@ export class DynamicArray {
   /**
    *
    * @param {number} index - The specific index to get elements
-   * @return {{element}} The element to at specified index
+   * @return {string} element The element to at specified index
    */
   get(index) {
     if (index >= this.endIndex) {
@@ -174,7 +174,6 @@ export class DynamicArray {
       i == this.endIndex - 1 ? (output += '') : (output += ', ');
     }
     output += ']';
-    console.log(output);
     return output;
   }
 }
