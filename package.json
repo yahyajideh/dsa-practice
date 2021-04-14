@@ -7,7 +7,8 @@
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist",
     "test": "jest",
-    "clean": "rm -rf .parcel-cache dist node_modules"
+    "clean": "rm -rf .parcel-cache dist node_modules",
+    "rename:lc": "rename 's/ /-/g' ./src/leetcode/**/*"
   },
   "author": "Yahya Jideh",
   "license": "ISC",
